@@ -11,7 +11,7 @@ class Solution {
             return dp[n];
         }
         else{
-            return fib(n-1)+fib(n-2);
+            return dp[n] = fib(n-1)+fib(n-2);
         }
     }
 }
