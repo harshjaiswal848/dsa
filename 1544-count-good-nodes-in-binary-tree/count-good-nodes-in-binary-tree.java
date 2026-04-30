@@ -14,20 +14,20 @@
  * }
  */
 class Solution {
-    public int dfs(TreeNode node, int maxSoFar){
+    public int helper(TreeNode node, int max){
         if(node == null) return 0;
         int count =0;
-        if(node.val >= maxSoFar){
+        if(node.val >=max){
             count++;
         }
-        //update maxSoFar
-        int newMax = Math.max(maxSoFar, node.val);
+        int newMax = Math.max(max, node.val);
 
-        count+= dfs(node.left,newMax);
-        count+= dfs(node.right,newMax);
+        count += helper(node.left, newMax);
+        count += helper(node.right, newMax);
+
         return count;
     }
     public int goodNodes(TreeNode root) {
-        return dfs(root, root.val);
+        return helper(root, root.val);
     }
 }
