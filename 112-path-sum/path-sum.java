@@ -19,15 +19,15 @@ class Solution {
             return false;
         }
         sum += root.val;
-        if(root.left == null && root.right==null){
-            if(sum== targetSum){
+        if(root.left==null && root.right == null){
+            if(sum == targetSum){
                 return true;
             }
             return false;
         }
-        return dfs(root.left, sum, targetSum) || dfs(root.right, sum, targetSum);
+        return dfs(root.left, sum, targetSum) || dfs(root.right, sum , targetSum);
     }
     public boolean hasPathSum(TreeNode root, int targetSum) {
-        return dfs(root, 0, targetSum);        
+        return dfs(root, 0, targetSum);
     }
 }
