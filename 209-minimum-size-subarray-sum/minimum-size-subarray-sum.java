@@ -7,13 +7,14 @@ class Solution {
         for(int right = 0; right < n; right++){
             sum += nums[right];
             while(sum >= target){
-                minLength = Math.min(minLength, right - left + 1);
+                minLength = Math.min(minLength, right - left +1);
                 sum -= nums[left];
                 left++;
             }
         }
         if(minLength == Integer.MAX_VALUE){
-            return 0;
+            return
+             0;
         }
         return minLength;
     }
