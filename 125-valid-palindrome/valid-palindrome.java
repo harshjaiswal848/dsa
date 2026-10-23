@@ -3,7 +3,6 @@ class Solution {
         int left = 0;
         int right = s.length()-1;
         s = s.toLowerCase();
-
         while(left < right){
             if(!Character.isLetterOrDigit(s.charAt(left))){
                 left++;
