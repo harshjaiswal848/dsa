@@ -8,17 +8,16 @@ class Solution {
         }
         for(int num : set){
             if(!set.contains(num-1)){
-                int currentNum = num;
+                int currNum = num;
                 int currLen = 1;
-                while(set.contains(currentNum + 1)){
+                while(set.contains(currNum+1)){
                     currLen++;
-                    currentNum ++;
-
+                    currNum++;
                 }
                 maxLength = Math.max(maxLength, currLen);
             }
         }
         return maxLength;
-    }
 
+    }
 }
