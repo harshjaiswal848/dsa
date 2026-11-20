@@ -3,11 +3,10 @@ class Solution {
         if(s.length() != t.length()){
             return false;
         }
-        int freq [] = new int[26];
-        for(int i=0; i<s.length(); i++){
+        int freq[] = new int[26];
+        for(int i=0;i<s.length();i++){
             freq[s.charAt(i) - 'a']++;
             freq[t.charAt(i) - 'a']--;
-
         }
         for(int a : freq){
             if(a != 0){
@@ -15,6 +14,5 @@ class Solution {
             }
         }
         return true;
-        
     }
 }
